@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Api/" />
+  <Folder Name="/Application/" />
+  <Folder Name="/Core/">
+    <Project Path="BryShort.Core/BryShort.Core.csproj" Id="0004ced8-fa5a-4d24-b4e8-ee893b50e3be" />
+  </Folder>
+  <Folder Name="/Infrastructure/" />
+</Solution>
