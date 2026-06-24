@@ -4,11 +4,12 @@ using System.Text;
 
 namespace BryShort.Core.Exceptions;
 
-internal class BaseException : Exception
+public class BaseException : Exception
 {
     public string StatusCode { get; set; } = default!;
 
-    public BaseException(string message) : base(message)
+    public BaseException(string message, string statusCode) : base(message)
     {
+        StatusCode = statusCode;
     }
 }
