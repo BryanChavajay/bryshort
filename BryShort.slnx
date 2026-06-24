@@ -1,8 +1,12 @@
 <Solution>
   <Folder Name="/Api/" />
-  <Folder Name="/Application/" />
+  <Folder Name="/Application/">
+    <Project Path="BryShort.Application/BryShort.Application.csproj" Id="8b89eef1-22cf-4a9f-b084-c33457155dce" />
+  </Folder>
   <Folder Name="/Core/">
     <Project Path="BryShort.Core/BryShort.Core.csproj" Id="0004ced8-fa5a-4d24-b4e8-ee893b50e3be" />
   </Folder>
-  <Folder Name="/Infrastructure/" />
+  <Folder Name="/Infrastructure/">
+    <Project Path="BryShort.Infrastructure/BryShort.Infrastructure.csproj" Id="7239750c-9190-406f-97d9-38216bc15a9b" />
+  </Folder>
 </Solution>
