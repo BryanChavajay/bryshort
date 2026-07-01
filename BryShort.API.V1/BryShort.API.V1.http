@@ -1,0 +1,6 @@
+@BryShort.API.V1_HostAddress = http://localhost:5277
+
+GET {{BryShort.API.V1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

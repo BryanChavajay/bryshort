@@ -1,5 +1,7 @@
 <Solution>
-  <Folder Name="/Api/" />
+  <Folder Name="/Api/">
+    <Project Path="BryShort.API.V1/BryShort.API.V1.csproj" Id="dd1d4be8-a5a6-44b3-ab61-cd0269a32b71" />
+  </Folder>
   <Folder Name="/Application/">
     <Project Path="BryShort.Application/BryShort.Application.csproj" Id="8b89eef1-22cf-4a9f-b084-c33457155dce" />
   </Folder>
