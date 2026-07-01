@@ -9,5 +9,5 @@ public interface ILinkRepository
 {
     Task<Link> Add(Link link);
 
-    Task<Link> GetByShortUrl(string shortUrl);
+    Task<Link?> GetByShortUrl(string shortUrl);
 }

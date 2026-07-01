@@ -9,11 +9,11 @@ public interface IUserRepository
 {
     Task<User> Add(User user);
 
-    Task<User> GetById(int id);
+    Task<User?> GetById(int id);
 
-    Task<User> GetByPublicId(Guid publicId);
+    Task<User?> GetByPublicId(Guid publicId);
 
-    Task<User> GetByUsername(string username);
+    Task<User?> GetByUsername(string username);
 
     Task<bool> ExistUsername(string username);
 }
