@@ -26,5 +26,7 @@ internal class Userconfig : IEntityTypeConfiguration<User>
 
         builder.Property(prop => prop.Password)
             .IsRequired();
+
+        builder.HasIndex(prop => prop.IsActive);
     }
 }
