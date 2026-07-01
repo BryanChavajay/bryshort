@@ -1,4 +1,5 @@
-﻿using BryShort.Core.Entities;
+﻿using BryShort.Application.Utils.Mediator;
+using BryShort.Core.Entities;
 using BryShort.Core.Exceptions;
 using BryShort.Core.Interfaces;
 using System;
@@ -8,6 +9,7 @@ using System.Text;
 namespace BryShort.Application.Users.Create;
 
 public class UseCaseCreateUser(IUserRepository userRepository)
+    : IRequestExecute<CreateUserCommand, User>
 {
     public async Task<User> Execute(CreateUserCommand command)
     {
