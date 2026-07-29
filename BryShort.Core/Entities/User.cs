@@ -14,6 +14,8 @@ public class User
     public bool IsActive { get; private set; } = true;
     public bool IsDeleted { get; private set; } = false;
 
+    private User ( ) { }
+
     private User(int id, Guid publicId, string username, string password, bool isActive, bool isDeleted)
     {
         if (string.IsNullOrWhiteSpace(username)) { throw new BusinessRuleException("El nombre de usuario es obligatorio"); }

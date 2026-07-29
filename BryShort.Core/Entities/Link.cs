@@ -14,6 +14,8 @@ public class Link
     public int UserId { get; private set; }
     public bool IsDeleted { get; private set; }
 
+    private Link() { }
+
     private Link(int id, string shortUrl, Url urlTo,  int userId,  bool isDeleted)
     {
         if (string.IsNullOrWhiteSpace(shortUrl)) { throw new BusinessRuleException("La url corta no puede ser vacia");  }
@@ -26,7 +28,7 @@ public class Link
         IsDeleted = isDeleted;
     }
 
-    static public Link Create(string shortUrl, Url urlTo, int userId, bool isDeleted, int id = 0)
+    static public Link Create(string shortUrl, Url urlTo, int userId, bool isDeleted)
     {
         return new Link(0, shortUrl, urlTo, userId, isDeleted);
     }
