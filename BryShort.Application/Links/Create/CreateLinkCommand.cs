@@ -7,8 +7,8 @@ using System.Text;
 namespace BryShort.Application.Links.Create;
 
 public record CreateLinkCommand(
-    string shortUrl,
-    string urlTo,
-    DateTime? expiresAt,
-    int userId
+    string ShortUrl,
+    string UrlTo,
+    DateTime? ExpiresAt,
+    int UserId
 ) : IRequest<Link>;
