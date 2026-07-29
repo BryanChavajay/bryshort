@@ -9,7 +9,7 @@ using System.Text;
 
 namespace BryShort.Application;
 
-public static class DependyInjection
+public static class ApplicationDependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
