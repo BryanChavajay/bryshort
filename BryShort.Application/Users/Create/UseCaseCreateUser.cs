@@ -19,7 +19,7 @@ public class UseCaseCreateUser(IUserRepository userRepository)
 
         var passwordHashed = BCrypt.Net.BCrypt.HashPassword(command.Password);
 
-        var user = User.Create(username: command.Username, password: passwordHashed, isActive: command.isActive);
+        var user = User.Create(username: command.Username, password: passwordHashed, isActive: command.IsActive);
 
         return await userRepository.Add(user);
     }

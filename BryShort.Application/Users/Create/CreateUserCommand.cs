@@ -9,5 +9,5 @@ namespace BryShort.Application.Users.Create;
 public record CreateUserCommand(
     string Username,
     string Password,
-    bool isActive
+    bool IsActive
 ) : IRequest<User>;
