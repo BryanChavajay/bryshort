@@ -4,11 +4,6 @@ using System.Text;
 
 namespace BryShort.Core.Exceptions;
 
-public class BusinessRuleException : BaseException
+public class BusinessRuleException(string message) : BaseException(message, 400)
 {
-    public new const string StatusCode = "400";
-
-    public BusinessRuleException(string message) : base(message, StatusCode)
-    {
-    }
 }

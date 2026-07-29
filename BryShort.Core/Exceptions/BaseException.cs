@@ -6,9 +6,9 @@ namespace BryShort.Core.Exceptions;
 
 public class BaseException : Exception
 {
-    public string StatusCode { get; set; } = default!;
+    public int StatusCode { get; set; } = default!;
 
-    public BaseException(string message, string statusCode) : base(message)
+    public BaseException(string message, int statusCode) : base(message)
     {
         StatusCode = statusCode;
     }
