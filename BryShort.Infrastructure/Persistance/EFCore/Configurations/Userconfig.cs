@@ -12,8 +12,7 @@ internal class Userconfig : IEntityTypeConfiguration<User>
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.HasKey(prop => prop.Id);
-        builder.Property(prop => prop.Id)
-            .UseIdentityColumn();
+        builder.Property(prop => prop.Id);
 
         builder.Property(prop => prop.PublicId)
             .HasMaxLength(64);
