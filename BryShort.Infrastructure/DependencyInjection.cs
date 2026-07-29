@@ -9,7 +9,7 @@ using System.Text;
 
 namespace BryShort.Infrastructure;
 
-public static class DependencyInjection
+public static class InfraestructureDependencyInjection
 {
     public static IServiceCollection AddInfraestructure(this IServiceCollection services)
     {
