@@ -17,7 +17,7 @@ internal class EFLinkRepository(ApplicationDbContext context) : ILinkRepository
 
     public async Task<Link?> GetByShortUrl(string shortUrl)
     {
-        var link = context.Links.OrderByDescending(x => x.Id).FirstOrDefault(x => x.ShortUrl == shortUrl);
+        var link = context.Links.OrderByDescending(x => x.Id).FirstOrDefault(x => x.ShortUrl == shortUrl && !x.IsDeleted);
         return link;
     }
 }
