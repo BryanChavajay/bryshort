@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BryShort.Application\BryShort.Application.csproj" />
+    <ProjectReference Include="..\BryShort.Core\BryShort.Core.csproj" />
     <ProjectReference Include="..\BryShort.Infrastructure\BryShort.Infrastructure.csproj" />
   </ItemGroup>
 
