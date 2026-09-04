@@ -3,8 +3,10 @@ using BryShort.API.V1.DTOs.requests;
 using BryShort.API.V1.Middlewares;
 using BryShort.Application;
 using BryShort.Application.Links.Create;
+using BryShort.Application.Links.GetLinkByShorturl;
 using BryShort.Application.Users.Create;
 using BryShort.Application.Utils.Mediator;
+using BryShort.Core.Exceptions;
 using BryShort.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
@@ -44,6 +46,17 @@ app.MapPost("api/links", async ([FromBody] CreateLinkDTO dto, IMediator mediator
     var result = await mediator.Send(command);
 
     return new PublicLink(ShortUrl: result.ShortUrl, UrlTo: result.UrlTo.Value, ExpiresAt: result.UrlTo.ExpiresAt);
+});
+
+app.MapGet("/{code}", async (string code, HttpContext context, IMediator mediator) =>
+{
+    if (code.Length > 16) { throw new BusinessRuleException("No envio un codigo valido"); }
+
+    var command = new GetLinkByShorturlCommand(code);
+
+    var result = await mediator.Send(command);
+
+    context.Response.Redirect(location: result.UrlTo.Value, permanent: false);
 });
 
 app.Run();
