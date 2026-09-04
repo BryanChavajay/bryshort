@@ -27,6 +27,6 @@ public class Url
     public bool IsValid()
     {
         if (ExpiresAt is null) { return true; }
-        return ExpiresAt <= DateTime.UtcNow;
+        return DateTime.UtcNow <= ExpiresAt;
     }
 }
